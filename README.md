@@ -1,6 +1,19 @@
 # IK2206
 Internet Security and Privacy
 
+##VPN manual:
+
+This VPN is a port forwarding type and for testing/running it you need the commands below:
+in order to start the session you MUST have a server listening to a port like 2206
+
+java ForwardServer --handshakeport=2206 --usercert=server.pem --cacert=ca.pem --key=server-private.der
+
+then in order to start client/s you use:
+
+java ForwardClient --handshakehost=localhost --handshakeport=2206 --targethost=localhost --targetport=9876 --usercert=client.pem --cacert=ca.pem --key=client-private.der
+
+
+
 PGP lab commands needed:
 ==========================================
 
